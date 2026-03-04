@@ -1,0 +1,143 @@
+@use 'variables' as *;
+
+.card {
+  width: 200px;
+  padding: 0 16px;
+  border: 1px solid $card-border-color;
+  border-radius: 5px;
+  background-color: $background-color-white;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &__photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 160px;
+    height: 134px;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+
+  &__imac {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  &__name {
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $card-name-color;
+  }
+
+  &__code {
+    margin-top: 4px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $card-code-color;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-star {
+      display: flex;
+      background-image: url(../images/star.svg);
+      background-position: center;
+      height: 16px;
+      width: 16px;
+      background-repeat: no-repeat;
+      margin-right: 4px;
+
+      .card__stars-star:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__reviews {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: $card-name-color;
+  }
+
+  &__price {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-word {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $card-code-color;
+    }
+
+    &-value {
+      font-style: normal;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      color: $card-name-color;
+    }
+  }
+
+  &__button-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 40px;
+    background-color: $nav-link-blue;
+    border: 1px solid $nav-link-blue;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $background-color-white;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $background-color-white;
+      color: $nav-link-blue;
+    }
+  }
+
+  &:hover .card__name {
+    color: $card-name-color-hover;
+  }
+}
+
+@for $i from 1 through 5 {
+  .card__stars--#{$i} {
+    .card__stars-star:nth-child(-n + #{$i}) {
+      background-image: url(../images/star-active.svg);
+    }
+  }
+}

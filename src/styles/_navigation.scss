@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+.navigation {
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: flex;
+    height: 60px;
+    text-decoration: none;
+    color: $nav-link-color;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  &__link:hover {
+    color: $nav-link-blue;
+  }
+}
+
+.is-active {
+  color: $nav-link-blue;
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: $nav-link-blue;
+  bottom: 0;
+  left: 0;
+}
