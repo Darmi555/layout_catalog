@@ -40,6 +40,7 @@
   font-weight: 500;
   line-height: 14px;
   text-decoration: none;
+  transition: transform .3s;
   display: flex;
 }
 
@@ -95,7 +96,7 @@
   border-radius: 5px;
   width: 200px;
   padding: 0 16px;
-  transition: transform .3s;
+  transition: color .3s;
 }
 
 .card:hover {
@@ -103,21 +104,28 @@
 }
 
 .card__photo {
-  background-image: url("imac.d0e0225a.jpeg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  justify-content: center;
+  align-items: center;
   width: 160px;
   height: 134px;
-  margin: 32px 3px 0;
+  margin: 32px auto 0;
+  display: flex;
 }
 
-.card__name {
+.card__imac {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card__title {
   color: #060b35;
   margin-top: 40px;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
+  transition: all .3s;
 }
 
 .card__code {
@@ -153,10 +161,6 @@
 
 .card__stars-star:last-child {
   margin-right: 0;
-}
-
-.stars--1 .card__stars-star:nth-child(-n+1), .stars--2 .card__stars-star:nth-child(-n+2), .stars--3 .card__stars-star:nth-child(-n+3), .stars--4 .card__stars-star:nth-child(-n+4), .stars--5 .card__stars-star:nth-child(-n+5) {
-  background-image: url("star-active.2be54011.svg");
 }
 
 .card__reviews {
@@ -207,6 +211,7 @@
   font-weight: 700;
   line-height: 16px;
   text-decoration: none;
+  transition: all .3s;
   display: flex;
 }
 
@@ -215,7 +220,11 @@
   background-color: #fff;
 }
 
-.card:hover .card__name {
+.card:hover .card__title {
   color: #34568b;
+}
+
+.card__stars--1 .card__stars-star:nth-child(-n+1), .card__stars--2 .card__stars-star:nth-child(-n+2), .card__stars--3 .card__stars-star:nth-child(-n+3), .card__stars--4 .card__stars-star:nth-child(-n+4), .card__stars--5 .card__stars-star:nth-child(-n+5) {
+  background-image: url("star-active.2be54011.svg");
 }
 /*# sourceMappingURL=index.e378193d.css.map */
