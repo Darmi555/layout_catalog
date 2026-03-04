@@ -1,10 +1,10 @@
 @use 'variables' as *;
 
 .card {
-  width: 200px;
-  padding: 0 16px;
-  border: 1px solid $card-border-color;
-  border-radius: 5px;
+  width: $card-width;
+  padding: 0 $card-padding-horizontal;
+  border: $card-border-size solid $card-border-color;
+  border-radius: $card-border-radius;
   background-color: $background-color-white;
   transition: transform 0.3s ease;
 
@@ -17,8 +17,8 @@
     align-items: center;
     justify-content: center;
 
-    width: 160px;
-    height: 134px;
+    width: $card-photo-width;
+    height: $card-photo-height;
     margin: 0 auto;
     margin-top: 32px;
   }
@@ -32,17 +32,17 @@
   &__name {
     margin-top: 40px;
     font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
+    font-weight: $font-weight-m;
+    font-size: $font-size-s;
+    line-height: $line-height-m;
     color: $card-name-color;
   }
 
   &__code {
     margin-top: 4px;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
+    font-weight: $font-weight-sm;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
     color: $card-code-color;
   }
 
@@ -62,12 +62,12 @@
       display: flex;
       background-image: url(../images/star.svg);
       background-position: center;
-      height: 16px;
-      width: 16px;
+      height: $star-size;
+      width: $star-size;
       background-repeat: no-repeat;
-      margin-right: 4px;
+      margin-right: $star-margin-right;
 
-      .card__stars-star:last-child {
+      &:last-child {
         margin-right: 0;
       }
     }
@@ -75,9 +75,9 @@
 
   &__reviews {
     font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
+    font-weight: $font-weight-sm;
+    font-size: $font-size-xs;
+    line-height: $line-height-xs;
     color: $card-name-color;
   }
 
@@ -89,17 +89,17 @@
 
     &-word {
       font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
+      font-weight: $font-weight-sm;
+      font-size: $font-size-s;
+      line-height: $line-height-m;
       color: $card-code-color;
     }
 
     &-value {
       font-style: normal;
-      font-size: 16px;
-      line-height: 18px;
-      font-weight: 700;
+      font-size: $font-size-l;
+      line-height: $line-height-m;
+      font-weight: $font-weight-l;
       color: $card-name-color;
     }
   }
@@ -108,16 +108,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    height: 40px;
+    margin-top: $card-button-margin;
+    margin-bottom: $card-button-margin;
+    height: $card-button-height;
     background-color: $nav-link-blue;
-    border: 1px solid $nav-link-blue;
-    border-radius: 5px;
+    border: $card-border-size solid $nav-link-blue;
+    border-radius: $card-border-radius;
     font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
+    font-weight: $font-weight-l;
+    font-size: $font-size-m;
+    line-height: $line-height-s;
     text-align: center;
     text-transform: uppercase;
     color: $background-color-white;
