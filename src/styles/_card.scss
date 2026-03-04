@@ -6,7 +6,7 @@
   border: $card-border-size solid $card-border-color;
   border-radius: $card-border-radius;
   background-color: $background-color-white;
-  transition: transform 0.3s ease;
+  transition: color 0.3s ease;
 
   &:hover {
     transform: scale(1.2);
@@ -29,13 +29,14 @@
     object-fit: contain;
   }
 
-  &__name {
+  &__title {
     margin-top: 40px;
     font-style: normal;
     font-weight: $font-weight-m;
     font-size: $font-size-s;
     line-height: $line-height-m;
     color: $card-name-color;
+    transition: all 0.3s ease;
   }
 
   &__code {
@@ -122,14 +123,17 @@
     text-transform: uppercase;
     color: $background-color-white;
     text-decoration: none;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: $background-color-white;
       color: $nav-link-blue;
     }
+
+
   }
 
-  &:hover .card__name {
+  &:hover .card__title {
     color: $card-name-color-hover;
   }
 }
